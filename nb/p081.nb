@@ -1,0 +1,150 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4889,        140]
+NotebookOptionsPosition[      4559,        124]
+NotebookOutlinePosition[      4916,        140]
+CellTagsIndexPosition[      4873,        137]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "81", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.599212377724003*^9, 3.599212382937241*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.599212376943822*^9, 3.599212378759034*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"matrix", "=", 
+    RowBox[{
+     RowBox[{"StringSplit", "[", 
+      RowBox[{
+       RowBox[{"StringSplit", "[", 
+        RowBox[{
+         RowBox[{
+         "Import", "[", "\"\<http://projecteuler.net/project/matrix.txt\>\"", 
+          "]"}], ",", "\"\<\\n\>\""}], "]"}], ",", "\"\<,\>\""}], "]"}], "//",
+      "ToExpression"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"FindPath", "[", 
+     RowBox[{"x_Integer", ",", "y_Integer"}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{"FindPath", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], "=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"l", "=", 
+         RowBox[{"Length", "[", "matrix", "]"}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"matrix", "[", 
+         RowBox[{"[", 
+          RowBox[{"x", ",", "y"}], "]"}], "]"}], "+", 
+        RowBox[{"Which", "[", 
+         RowBox[{
+          RowBox[{"y", "\[Equal]", "x", "\[Equal]", "l"}], ",", "0", ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"y", "<", "x", "\[Equal]", "l"}], ",", 
+          RowBox[{"FindPath", "[", 
+           RowBox[{"x", ",", 
+            RowBox[{"y", "+", "1"}]}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"x", "<", "y", "\[Equal]", "l"}], ",", 
+          RowBox[{"FindPath", "[", 
+           RowBox[{
+            RowBox[{"x", "+", "1"}], ",", "y"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"x", "<", "l"}], "&&", 
+           RowBox[{"y", "<", "l"}]}], ",", 
+          RowBox[{"Min", "[", 
+           RowBox[{
+            RowBox[{"FindPath", "[", 
+             RowBox[{"x", ",", 
+              RowBox[{"y", "+", "1"}]}], "]"}], ",", 
+            RowBox[{"FindPath", "[", 
+             RowBox[{
+              RowBox[{"x", "+", "1"}], ",", "y"}], "]"}]}], "]"}]}], 
+         "]"}]}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FindPath", "@@@", 
+   RowBox[{"Sort", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"Length", "[", "matrix", "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", 
+           RowBox[{"Length", "[", "matrix", "]"}]}], "}"}]}], "]"}], ",", 
+       "1"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Total", "[", "#1", "]"}], "\[GreaterEqual]", 
+       RowBox[{"Total", "[", "#2", "]"}]}], "&"}]}], "]"}]}], "//", 
+  "Last"}]}], "Input",
+ CellChangeTimes->{{3.599205745447167*^9, 3.599205784251277*^9}, {
+  3.599205814271446*^9, 3.599205854811358*^9}, {3.599206831763504*^9, 
+  3.5992068409013977`*^9}, {3.599206905107633*^9, 3.599206906410121*^9}, {
+  3.599207020740848*^9, 3.599207026106413*^9}, {3.599207244068447*^9, 
+  3.5992072521747007`*^9}, {3.599207458392964*^9, 3.599207486676456*^9}, {
+  3.599211593042727*^9, 3.5992115968877993`*^9}, {3.5992116805869093`*^9, 
+  3.599211680900338*^9}, {3.599211716991851*^9, 3.59921172928627*^9}, {
+  3.599211831260173*^9, 3.599212035193252*^9}, {3.5992120723490458`*^9, 
+  3.599212077098073*^9}, {3.599212318091176*^9, 3.59921233209321*^9}, {
+  3.599212366891608*^9, 3.599212368289118*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{Automatic, 261}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 475, 8, 114, "Input"],
+Cell[1035, 30, 92, 1, 28, "Input"],
+Cell[1130, 33, 3425, 89, 233, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

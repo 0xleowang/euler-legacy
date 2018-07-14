@@ -1,0 +1,116 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3614,        106]
+NotebookOptionsPosition[      3282,         90]
+NotebookOutlinePosition[      3641,        106]
+CellTagsIndexPosition[      3598,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "58", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.599576662417122*^9, 3.599576677483141*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.599576660949078*^9, 3.599576661656701*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SpiralPrimesRatio", "[", "1", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"SpiralPrimesRatio", "[", 
+     RowBox[{"l_Integer", "?", "OddQ"}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{"SpiralPrimesRatio", "[", "l", "]"}], "=", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Part", "[", 
+         RowBox[{
+          RowBox[{"SpiralPrimesRatio", "[", 
+           RowBox[{"l", "-", "2"}], "]"}], ",", "1"}], "]"}], "+", 
+        RowBox[{"Length", "@", 
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], "*", 
+             RowBox[{"l", "^", "2"}]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"l", "-", "1"}], ")"}], "*", 
+             RowBox[{"Range", "[", 
+              RowBox[{"0", ",", "3"}], "]"}]}]}], ",", "PrimeQ"}], "]"}]}]}], 
+       ",", 
+       RowBox[{
+        RowBox[{"Part", "[", 
+         RowBox[{
+          RowBox[{"SpiralPrimesRatio", "[", 
+           RowBox[{"l", "-", "2"}], "]"}], ",", "2"}], "]"}], "+", "4"}]}], 
+      "}"}]}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"NestWhile", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "+", "2"}], "&"}], ",", "3", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Divide", "@@", 
+      RowBox[{"SpiralPrimesRatio", "[", "#", "]"}]}], "\[GreaterEqual]", 
+     "0.1"}], "&"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.599574206396473*^9, 3.599574218809616*^9}, {
+  3.599574253925202*^9, 3.599574477117652*^9}, {3.599574509005721*^9, 
+  3.599574514356835*^9}, {3.599574620190761*^9, 3.599574622501297*^9}, {
+  3.599574751839423*^9, 3.5995747719841757`*^9}, {3.5995751053089542`*^9, 
+  3.5995751057809057`*^9}, {3.599575392231194*^9, 3.599575404166669*^9}, {
+  3.599576519564506*^9, 3.5995765917406073`*^9}, {3.5995766495274878`*^9, 
+  3.5995766505615683`*^9}, {3.59957668434096*^9, 3.5995766942981453`*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{Automatic, 217}, {-71, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 475, 8, 114, "Input"],
+Cell[1035, 30, 92, 1, 28, "Input"],
+Cell[1130, 33, 2148, 55, 131, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

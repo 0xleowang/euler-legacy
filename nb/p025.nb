@@ -1,0 +1,73 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1975,         64]
+NotebookOptionsPosition[      1648,         48]
+NotebookOutlinePosition[      2004,         64]
+CellTagsIndexPosition[      1961,         61]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "25", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.5985762684395113`*^9, 3.598576268594584*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.59857627034089*^9, 3.598576270467861*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NestWhile", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "+", "1"}], "&"}], ",", "1", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Length", "@", 
+      RowBox[{"IntegerDigits", "@", 
+       RowBox[{"Fibonacci", "[", "#", "]"}]}]}], "<", "1000"}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.598576271240035*^9, 3.5985762714998817`*^9}, {
+  3.5985763094855633`*^9, 3.598576317616173*^9}, {3.598576358385386*^9, 
+  3.598576409416692*^9}, {3.59857647035848*^9, 3.598576507274123*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{52, Automatic}, {Automatic, 4}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 477, 8, 114, "Input"],
+Cell[1037, 30, 91, 1, 28, "Input"],
+Cell[1131, 33, 513, 13, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

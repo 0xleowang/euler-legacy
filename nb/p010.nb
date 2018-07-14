@@ -1,0 +1,73 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1981,         64]
+NotebookOptionsPosition[      1653,         48]
+NotebookOutlinePosition[      2010,         64]
+CellTagsIndexPosition[      1967,         61]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "10", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.5984273178496847`*^9, 3.5984273180724983`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5984273197939*^9, 3.5984273202074757`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Total", "@", 
+  RowBox[{"Prime", "@", 
+   RowBox[{"NestWhileList", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "+", "1"}], "&"}], ",", "1", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Prime", "[", "#", "]"}], "<", "2000000"}], "&"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.598427321927594*^9, 3.5984273607392817`*^9}, {
+  3.598427425698452*^9, 3.5984276104678783`*^9}, {3.5984359397422047`*^9, 
+  3.598435946457711*^9}, {3.59844452845404*^9, 3.598444528571567*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 479, 8, 114, "Input"],
+Cell[1039, 30, 92, 1, 28, "Input"],
+Cell[1134, 33, 515, 13, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,73 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1941,         63]
+NotebookOptionsPosition[      1612,         47]
+NotebookOutlinePosition[      1970,         63]
+CellTagsIndexPosition[      1927,         60]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "97", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.599012096035639*^9, 3.599012103119155*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.599012094517221*^9, 3.599012096975564*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FromDigits", "@", 
+  RowBox[{"Take", "[", 
+   RowBox[{
+    RowBox[{"IntegerDigits", "[", 
+     RowBox[{
+      RowBox[{"28433", "\[Times]", 
+       RowBox[{"Power", "[", 
+        RowBox[{"2", ",", "7830457"}], "]"}]}], "+", "1"}], "]"}], ",", 
+    RowBox[{"-", "10"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.599011735021738*^9, 3.599011771186741*^9}, {
+  3.5990119260674343`*^9, 3.599011954085815*^9}, {3.599012029664009*^9, 
+  3.599012038228756*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{180, Automatic}, {16, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 475, 8, 114, "Input"],
+Cell[1035, 30, 92, 1, 28, "Input"],
+Cell[1130, 33, 478, 12, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

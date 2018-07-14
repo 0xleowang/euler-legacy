@@ -1,0 +1,126 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3682,        116]
+NotebookOptionsPosition[      3281,         97]
+NotebookOutlinePosition[      3638,        113]
+CellTagsIndexPosition[      3595,        110]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "49", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.5986577876049337`*^9, 3.598657788011662*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598657788988789*^9, 3.598657789147237*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"SpecialPrimeQ", "[", "n_Integer", "]"}], ":=", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"p", "=", 
+        RowBox[{"FromDigits", "/@", 
+         RowBox[{"Permutations", "@", 
+          RowBox[{"IntegerDigits", "[", "n", "]"}]}]}]}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"PrimeQ", "[", "n", "]"}], "&&", 
+         RowBox[{"PrimeQ", "[", 
+          RowBox[{"n", "+", "3330"}], "]"}], "&&", 
+         RowBox[{"PrimeQ", "[", 
+          RowBox[{"n", "+", 
+           RowBox[{"3330", "*", "2"}]}], "]"}]}], ")"}], "&&", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"MemberQ", "[", 
+          RowBox[{"p", ",", 
+           RowBox[{"n", "+", "3330"}]}], "]"}], "&&", 
+         RowBox[{"MemberQ", "[", 
+          RowBox[{"p", ",", 
+           RowBox[{"n", "+", 
+            RowBox[{"3330", "*", "2"}]}]}], "]"}]}], ")"}]}]}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"num", "=", 
+   RowBox[{"NestWhile", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "+", "2"}], "&"}], ",", "1001", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"SpecialPrimeQ", "[", "#", "]"}]}], "||", 
+       RowBox[{"#", "\[Equal]", "1487"}]}], "&"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Join", "@@", 
+   RowBox[{"IntegerDigits", "/@", 
+    RowBox[{"List", "[", 
+     RowBox[{"num", ",", 
+      RowBox[{"num", "+", "3330"}], ",", 
+      RowBox[{"num", "+", 
+       RowBox[{"3330", "*", "2"}]}]}], "]"}]}]}], "//", 
+  "FromDigits"}]}], "Input",
+ CellChangeTimes->{{3.598661477888152*^9, 3.5986615725307207`*^9}, {
+  3.598661602919786*^9, 3.598661659506382*^9}, {3.598661839072213*^9, 
+  3.598661867270303*^9}, {3.5986654246027718`*^9, 3.598665573555542*^9}}],
+
+Cell[BoxData["296962999629"], "Output",
+ CellChangeTimes->{{3.598661848713135*^9, 3.598661867565237*^9}, 
+   3.598665415171178*^9, {3.59866545022241*^9, 3.5986654646619*^9}, {
+   3.598665544146678*^9, 3.5986655738522387`*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 702},
+WindowMargins->{{28, Automatic}, {36, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 477, 8, 114, "Input"],
+Cell[1037, 30, 92, 1, 28, "Input"],
+Cell[CellGroupData[{
+Cell[1154, 35, 1882, 54, 131, "Input"],
+Cell[3039, 91, 226, 3, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

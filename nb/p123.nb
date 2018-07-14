@@ -1,0 +1,85 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2267,         75]
+NotebookOptionsPosition[      1937,         59]
+NotebookOutlinePosition[      2296,         75]
+CellTagsIndexPosition[      2253,         72]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "123", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.600999022954856*^9, 3.600999049062728*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6009990213048077`*^9, 3.60099902206677*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NestWhile", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "+", "1"}], "&"}], ",", "1", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Mod", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"p", "=", 
+             RowBox[{"Prime", "[", "#", "]"}]}], ")"}], "-", "1"}], ")"}], 
+         "^", "#"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"p", "+", "1"}], ")"}], "^", "#"}]}], ",", 
+       RowBox[{"p", "^", "2"}]}], "]"}], "\[LessEqual]", 
+     RowBox[{"10", "^", "10"}]}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.60099879770393*^9, 3.600998918312728*^9}, {
+  3.6009989529270887`*^9, 3.600998966040029*^9}, {3.600999014255315*^9, 
+  3.600999015771914*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{Automatic, 63}, {-396, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 476, 8, 114, "Input"],
+Cell[1036, 30, 93, 1, 28, "Input"],
+Cell[1132, 33, 801, 24, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

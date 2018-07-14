@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2882,         88]
+NotebookOptionsPosition[      2553,         72]
+NotebookOutlinePosition[      2910,         88]
+CellTagsIndexPosition[      2867,         85]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "34", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.598605725564373*^9, 3.598605747857753*^9}, {
+  3.598606835903366*^9, 3.598606836085023*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598605748735003*^9, 3.598605749009244*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"CuriousNumberQ", "[", "n_Integer", "]"}], ":=", 
+   RowBox[{"n", "\[Equal]", 
+    RowBox[{"Total", "[", 
+     RowBox[{
+      RowBox[{"IntegerDigits", "[", "n", "]"}], "!"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"maxDigits", "=", 
+   RowBox[{"NestWhile", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "+", "1"}], "&"}], ",", "1", ",", 
+     RowBox[{
+      RowBox[{"#", "<", 
+       RowBox[{"Length", "@", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"#", "*", 
+          RowBox[{"9", "!"}]}], "]"}]}]}], "&"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Total", "@", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", 
+     RowBox[{"3", ",", 
+      RowBox[{"maxDigits", "*", 
+       RowBox[{"9", "!"}]}]}], "]"}], ",", "CuriousNumberQ"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.598605750002062*^9, 3.598605750321192*^9}, {
+   3.598605798554282*^9, 3.5986058335111923`*^9}, {3.598605888964023*^9, 
+   3.598605910059195*^9}, {3.598605942771173*^9, 3.59860600906754*^9}, {
+   3.598606053538129*^9, 3.598606069319088*^9}, 3.598606154107553*^9, {
+   3.5986061960461197`*^9, 3.5986062523138647`*^9}, {3.5986062944582443`*^9, 
+   3.598606338784766*^9}, {3.598606596295023*^9, 3.598606597461349*^9}, {
+   3.5986067888745728`*^9, 3.598606790324897*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{36, Automatic}, {16, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 524, 9, 114, "Input"],
+Cell[1084, 31, 92, 1, 28, "Input"],
+Cell[1179, 34, 1370, 36, 63, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

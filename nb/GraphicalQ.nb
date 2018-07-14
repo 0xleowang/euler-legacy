@@ -1,0 +1,232 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7445,        223]
+NotebookOptionsPosition[      6605,        189]
+NotebookOutlinePosition[      6960,        205]
+CellTagsIndexPosition[      6917,        202]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{
+  "*", " ", "A", " ", "simple", " ", "program", " ", "to", " ", "show", " ", 
+   "a", " ", "sequense", " ", "is", " ", "graphical", " ", "or", " ", 
+   RowBox[{"not", "."}], "\[IndentingNewLine]", "*", " ", "The", " ", 
+   "algorithms", " ", "is", " ", "based", " ", "on", " ", "Havel", " ", 
+   "Hakimi", " ", 
+   RowBox[{"Theorem", "."}], "\[IndentingNewLine]", "*", 
+   "\[IndentingNewLine]", "*", " ", 
+   RowBox[{"Autor", ":", " ", 
+    RowBox[{"Leo", " ", "Wang"}]}]}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.612152717463044*^9, 3.61215289007767*^9}, {
+  3.612155130212336*^9, 3.612155131688424*^9}, {3.612155192824533*^9, 
+  3.612155193279257*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.612152893911416*^9, 3.6121528941571627`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GraphicalQ", "[", 
+   RowBox[{"seq_", "?", "ListQ"}], " ", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"seqS", "=", "seq"}], ",", "set1", ",", "set2"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"While", "[", 
+     RowBox[{"True", ",", "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+       "Return", " ", "True", " ", "if", " ", "all", " ", "entries", " ", 
+        "are", " ", "0."}], " ", "*)"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Select", "[", 
+           RowBox[{"seqS", ",", 
+            RowBox[{
+             RowBox[{"#", "\[Equal]", "0"}], "&"}]}], "]"}], "\[Equal]", 
+          "seqS"}], ",", 
+         RowBox[{"Return", "[", "True", "]"}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "Return", " ", "False", " ", "if", " ", "any", " ", "entry", " ", 
+         "is", " ", 
+         RowBox[{"negative", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Select", "[", 
+           RowBox[{"seqS", ",", 
+            RowBox[{
+             RowBox[{"#", "<", "0"}], "&"}]}], "]"}], "\[NotEqual]", 
+          RowBox[{"{", "}"}]}], ",", 
+         RowBox[{"Return", "[", "False", "]"}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "Sort", " ", "the", " ", "seqS", " ", "by", " ", "descending", " ", 
+         RowBox[{"order", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"seqS", "=", 
+        RowBox[{"Sort", "[", 
+         RowBox[{"seqS", ",", "Greater"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "Delete", " ", "d1", " ", "and", " ", "subract", " ", "1", " ", 
+         "from", " ", "next", " ", "d1", " ", "numbers", " ", "in", " ", 
+         RowBox[{"seq", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"d1", "=", 
+        RowBox[{"First", "[", "seqS", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"set1", "=", 
+        RowBox[{"Part", "[", 
+         RowBox[{"seqS", ",", 
+          RowBox[{"2", ";;", 
+           RowBox[{"Min", "[", 
+            RowBox[{
+             RowBox[{"Length", "[", "seqS", "]"}], ",", 
+             RowBox[{"1", "+", "d1"}]}], "]"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"set2", "=", 
+        RowBox[{"Part", "[", 
+         RowBox[{"seqS", ",", 
+          RowBox[{"Drop", "[", 
+           RowBox[{"seqS", ",", 
+            RowBox[{"Min", "[", 
+             RowBox[{
+              RowBox[{"Length", "[", "seqS", "]"}], ",", 
+              RowBox[{"1", "+", "d1"}]}], "]"}]}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"seqS", "=", 
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"set1", "-", "1"}], ",", "set2"}], "]"}]}], ";"}]}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.612152895093513*^9, 3.612152983592547*^9}, {
+  3.612153147232834*^9, 3.61215316570393*^9}, {3.612153828920624*^9, 
+  3.612153933483529*^9}, {3.612154457016769*^9, 3.612154513153562*^9}, {
+  3.612154567499681*^9, 3.6121545973158417`*^9}, {3.612154790637104*^9, 
+  3.612154792748954*^9}, {3.612154833717237*^9, 3.6121549365731297`*^9}, {
+  3.612154977610921*^9, 3.612155028213855*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.612154664886203*^9, 3.6121546703502274`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", "Examples", " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.612154672180344*^9, 3.612154702125389*^9}, {
+  3.612154736797415*^9, 3.6121547498990726`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphicalQ", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"-", "1"}], ",", "0", ",", "0"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.612154750757564*^9, 3.612154758886142*^9}, {
+  3.612155121818789*^9, 3.61215512568147*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.612154759799185*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphicalQ", "[", 
+  RowBox[{"{", 
+   RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6121547622912483`*^9, 3.612154768637183*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.612154769090419*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphicalQ", "[", 
+  RowBox[{"{", 
+   RowBox[{"0", ",", "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6"}], 
+   "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6121547709426117`*^9, 3.612154784865988*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{{3.612154785303733*^9, 3.612154795841311*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphicalQ", "[", 
+  RowBox[{"{", 
+   RowBox[{"6", ",", "6", ",", "6", ",", "6", ",", "4", ",", "4", ",", "4"}], 
+   "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.612154801612973*^9, 3.612154810137663*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.6121548105730247`*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 703},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 756, 15, 114, "Input"],
+Cell[1316, 37, 94, 1, 28, "Input"],
+Cell[1413, 40, 3509, 87, 267, "Input"],
+Cell[4925, 129, 94, 1, 28, "Input"],
+Cell[5022, 132, 185, 3, 28, "Input"],
+Cell[CellGroupData[{
+Cell[5232, 139, 254, 6, 28, "Input"],
+Cell[5489, 147, 74, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5600, 153, 198, 4, 28, "Input"],
+Cell[5801, 159, 73, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5911, 165, 232, 5, 28, "Input"],
+Cell[6146, 172, 98, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6281, 178, 230, 5, 28, "Input"],
+Cell[6514, 185, 75, 1, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1987,         65]
+NotebookOptionsPosition[      1661,         49]
+NotebookOutlinePosition[      2016,         65]
+CellTagsIndexPosition[      1973,         62]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "41", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.598836090174945*^9, 3.598836093567883*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598836087714139*^9, 3.5988360893068743`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Max", "@", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"FromDigits", "/@", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{"Permutations", "/@", 
+        RowBox[{"(", 
+         RowBox[{"Range", "/@", 
+          RowBox[{"Range", "[", "9", "]"}]}], ")"}]}], ",", "1"}], "]"}]}], 
+    ",", "PrimeQ"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.598835662108191*^9, 3.598835885238467*^9}, {
+  3.598835988793141*^9, 3.598836014512188*^9}, {3.598836046206279*^9, 
+  3.598836086315691*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 475, 8, 114, "Input"],
+Cell[1035, 30, 94, 1, 28, "Input"],
+Cell[1132, 33, 525, 14, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

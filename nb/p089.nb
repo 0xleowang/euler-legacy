@@ -1,0 +1,93 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2763,         83]
+NotebookOptionsPosition[      2433,         67]
+NotebookOutlinePosition[      2790,         83]
+CellTagsIndexPosition[      2747,         80]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "89", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.599284393444581*^9, 3.599284411625247*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.599284390926897*^9, 3.5992843927431498`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"romanNums", "=", 
+    RowBox[{"StringSplit", "[", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", "\"\<http://projecteuler.net/project/roman.txt\>\"", 
+       "]"}], ",", "\"\<\\n\>\""}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"ProperRoman", "[", "n_String", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"IntegerString", "[", 
+      RowBox[{
+       RowBox[{"FromDigits", "[", 
+        RowBox[{"n", ",", "\"\<Roman\>\""}], "]"}], ",", "\"\<Roman\>\""}], 
+      "]"}], "//", "Quiet"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Total", "[", 
+   RowBox[{"StringLength", "/@", "romanNums"}], "]"}], "-", 
+  RowBox[{"Total", "[", 
+   RowBox[{"StringLength", "/@", 
+    RowBox[{"ProperRoman", "/@", "romanNums"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.599282657293634*^9, 3.5992826582132072`*^9}, {
+  3.599283095516799*^9, 3.599283172228537*^9}, {3.59928321279117*^9, 
+  3.599283234964353*^9}, {3.5992832676561327`*^9, 3.599283277959001*^9}, {
+  3.599283600596706*^9, 3.5992837232459*^9}, {3.599283788807788*^9, 
+  3.5992838384323597`*^9}, {3.599284067490034*^9, 3.599284114443533*^9}, {
+  3.5992843116229362`*^9, 3.599284391768723*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{44, Automatic}, {-4, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 475, 8, 114, "Input"],
+Cell[1035, 30, 94, 1, 28, "Input"],
+Cell[1132, 33, 1297, 32, 114, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

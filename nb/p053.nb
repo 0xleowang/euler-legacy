@@ -1,0 +1,105 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3267,         95]
+NotebookOptionsPosition[      2939,         79]
+NotebookOutlinePosition[      3295,         95]
+CellTagsIndexPosition[      3252,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "53", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.598670756794383*^9, 3.598670757278101*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598670759546975*^9, 3.5986707597970943`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Cr", "[", 
+    RowBox[{"{", 
+     RowBox[{"n_Integer", ",", "r_Integer"}], "}"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"n", "!"}], "/", 
+     RowBox[{"r", "!"}]}], "/", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"n", "-", "r"}], ")"}], "!"}]}]}], ";", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Flatten", "@", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Cr", "/@", "#"}], "&"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"n", ",", "r"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", "1", ",", "100"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"r", ",", "1", ",", "n"}], "}"}]}], "]"}]}], "]"}]}], "/.", 
+    
+    RowBox[{
+     RowBox[{"x_Integer", "/;", 
+      RowBox[{"x", "\[LessEqual]", "1000000"}]}], "\[Rule]", 
+     RowBox[{"Sequence", "[", "]"}]}]}], "//", "Length"}]}]], "Input",
+ CellChangeTimes->{{3.598670760528582*^9, 3.598670760733306*^9}, {
+  3.5986712938330812`*^9, 3.598671304066515*^9}, {3.598671364594*^9, 
+  3.598671366960907*^9}, {3.598671598713583*^9, 3.598671599698977*^9}, {
+  3.598671655424541*^9, 3.598671743267131*^9}, {3.598671782549809*^9, 
+  3.5986718386553097`*^9}, {3.598671916317264*^9, 3.598671971099511*^9}, {
+  3.598672158354026*^9, 3.598672254369392*^9}, {3.598672444259322*^9, 
+  3.598672528821835*^9}, {3.5986725805294313`*^9, 3.598672730782712*^9}, {
+  3.598672769161427*^9, 3.59867283380052*^9}, {3.59867287259958*^9, 
+  3.5986729053129807`*^9}, {3.598672936644553*^9, 3.598672939934862*^9}, {
+  3.5986729892548532`*^9, 3.598672990483715*^9}, {3.59867306660387*^9, 
+  3.598673066713661*^9}, {3.598674874572689*^9, 3.598674946116124*^9}, {
+  3.5986810717920837`*^9, 3.598681081669258*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{52, Automatic}, {Automatic, 4}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 475, 8, 114, "Input"],
+Cell[1035, 30, 94, 1, 28, "Input"],
+Cell[1132, 33, 1803, 44, 63, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

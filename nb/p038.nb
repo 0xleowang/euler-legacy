@@ -1,0 +1,99 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3104,         90]
+NotebookOptionsPosition[      2775,         74]
+NotebookOutlinePosition[      3132,         90]
+CellTagsIndexPosition[      3089,         87]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "38", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.598614893156695*^9, 3.5986148934431963`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598614896500359*^9, 3.598614896834919*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Pandigital", "[", "n_Integer", "]"}], ":=", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"digits", "=", 
+         RowBox[{"IntegerDigits", "[", "n", "]"}]}], ",", 
+        RowBox[{"i", "=", "2"}]}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "digits", "]"}], "<", "9"}], ",", 
+         RowBox[{
+          RowBox[{"digits", "=", 
+           RowBox[{"Join", "[", 
+            RowBox[{"digits", ",", 
+             RowBox[{"IntegerDigits", "[", 
+              RowBox[{"n", "*", "i"}], "]"}]}], "]"}]}], ";", 
+          RowBox[{"i", "++"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Sort", "[", "digits", "]"}], "\[Equal]", 
+          RowBox[{"Range", "[", "9", "]"}]}], ",", 
+         RowBox[{"FromDigits", "[", "digits", "]"}], ",", "0"}], "]"}]}]}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Max", "[", 
+  RowBox[{"Pandigital", "/@", 
+   RowBox[{"Range", "[", "99999", "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.598614898392557*^9, 3.598614898595024*^9}, {
+  3.5986153648141193`*^9, 3.598615732084934*^9}, {3.598615795617669*^9, 
+  3.598615805527945*^9}, {3.598615867898417*^9, 3.598615880857854*^9}, {
+  3.598616082368948*^9, 3.5986161273185787`*^9}, {3.5986162693421087`*^9, 
+  3.598616336173089*^9}, {3.5986163782588463`*^9, 3.5986164383345537`*^9}, {
+  3.598651545248602*^9, 3.59865156741016*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 477, 8, 114, "Input"],
+Cell[1037, 30, 92, 1, 28, "Input"],
+Cell[1132, 33, 1639, 39, 97, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

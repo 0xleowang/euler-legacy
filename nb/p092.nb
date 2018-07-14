@@ -1,0 +1,103 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3215,         94]
+NotebookOptionsPosition[      2885,         78]
+NotebookOutlinePosition[      3242,         94]
+CellTagsIndexPosition[      3199,         91]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "92", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.5990143644677763`*^9, 3.599014368539834*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.599014362984683*^9, 3.599014363768692*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "n_Integer", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"f", "[", "n", "]"}], "=", 
+    RowBox[{"Total", "@", 
+     RowBox[{"Power", "[", 
+      RowBox[{
+       RowBox[{"IntegerDigits", "[", "n", "]"}], ",", "2"}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SpecialQ", "[", "n_Integer", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"SpecialQ", "[", "n", "]"}], "=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Which", "[", 
+       RowBox[{
+        RowBox[{"n", "\[Equal]", "1"}], ",", 
+        RowBox[{"Return", "[", "False", "]"}], ",", 
+        RowBox[{"n", "\[Equal]", "89"}], ",", 
+        RowBox[{"Return", "[", "True", "]"}]}], "]"}], ";", 
+      RowBox[{"SpecialQ", "@", 
+       RowBox[{"f", "[", "n", "]"}]}]}], ")"}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", "\"\<It takes about 90 seconds...\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Count", "[", 
+  RowBox[{
+   RowBox[{"Range", "[", 
+    RowBox[{"10", "^", "7"}], "]"}], ",", 
+   RowBox[{"_", "?", "SpecialQ"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.599012910570548*^9, 3.599012990577458*^9}, {
+  3.599013052082127*^9, 3.599013100321764*^9}, {3.5990131346610117`*^9, 
+  3.599013163546535*^9}, {3.599013276270153*^9, 3.599013695279245*^9}, {
+  3.599013740178144*^9, 3.5990137495501337`*^9}, {3.599013787468079*^9, 
+  3.5990137937296352`*^9}, {3.5990138543600473`*^9, 3.599013872965827*^9}, {
+  3.5990139328772917`*^9, 3.599014083981987*^9}, {3.599014238470251*^9, 
+  3.599014249699696*^9}, {3.599014353045892*^9, 3.59901437184146*^9}, {
+  3.599105594471553*^9, 3.5991055955349483`*^9}, {3.599105699901826*^9, 
+  3.599105754770537*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{Automatic, 18}, {Automatic, 49}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 477, 8, 114, "Input"],
+Cell[1037, 30, 92, 1, 28, "Input"],
+Cell[1132, 33, 1749, 43, 114, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

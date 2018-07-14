@@ -1,0 +1,114 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3795,        104]
+NotebookOptionsPosition[      3465,         88]
+NotebookOutlinePosition[      3822,        104]
+CellTagsIndexPosition[      3779,        101]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "112", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.6018492145795803`*^9, 3.6018492380345182`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6018492132129374`*^9, 3.601849213925424*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"b", ",", "n", ",", "i", ",", "digits"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"b", "=", "0"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"n", "=", "100"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"i", "=", "101"}], ",", 
+      RowBox[{
+       RowBox[{"b", "/", "n"}], "<", "0.99"}], ",", 
+      RowBox[{
+       RowBox[{"n", "++"}], ";", 
+       RowBox[{"i", "++"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"digits", "=", 
+        RowBox[{"IntegerDigits", "[", "i", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "@", 
+           RowBox[{"DeleteDuplicates", "[", "digits", "]"}]}], "\[Equal]", 
+          "1"}], ",", 
+         RowBox[{"Continue", "[", "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Sort", "[", "digits", "]"}], "\[Equal]", "digits"}], "||", 
+          RowBox[{
+           RowBox[{"Sort", "[", 
+            RowBox[{"digits", ",", "Greater"}], "]"}], "\[Equal]", 
+           "digits"}]}], ",", 
+         RowBox[{"Continue", "[", "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"b", "++"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"i", "-", "1"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.6018475641463127`*^9, 3.601847582483377*^9}, {
+  3.601847617599176*^9, 3.601847655957468*^9}, {3.601847714400032*^9, 
+  3.601847940090042*^9}, {3.601847973338707*^9, 3.601848015828775*^9}, {
+  3.601848094246619*^9, 3.601848102944766*^9}, {3.60184814668327*^9, 
+  3.601848151827186*^9}, {3.601848197266802*^9, 3.6018481985032263`*^9}, {
+  3.60184825161546*^9, 3.601848275344981*^9}, {3.601848408087215*^9, 
+  3.60184846430652*^9}, {3.601848515649849*^9, 3.601848518200004*^9}, {
+  3.601848671894483*^9, 3.601848705585795*^9}, {3.601848749499545*^9, 
+  3.601848834695095*^9}, {3.60184887704627*^9, 3.601848914167015*^9}, {
+  3.601848951557931*^9, 3.601848974130975*^9}, {3.6018490623432083`*^9, 
+  3.601849090873436*^9}, {3.601849146452778*^9, 3.6018492455845957`*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 480, 8, 114, "Input"],
+Cell[1040, 30, 94, 1, 28, "Input"],
+Cell[1137, 33, 2324, 53, 199, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

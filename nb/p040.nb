@@ -1,0 +1,79 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2126,         69]
+NotebookOptionsPosition[      1795,         53]
+NotebookOutlinePosition[      2155,         69]
+CellTagsIndexPosition[      2112,         66]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "40", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.598617755317544*^9, 3.5986177976834908`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598617753132818*^9, 3.5986177545978107`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Product", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Apply", "[", 
+     RowBox[{"Join", ",", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"IntegerDigits", "[", "n", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", 
+          RowBox[{"10", "^", "6"}]}], "}"}]}], "]"}]}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"10", "^", "i"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "0", ",", "6"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5986175495412693`*^9, 3.5986176147706547`*^9}, {
+  3.598617669378483*^9, 3.5986177524307537`*^9}, {3.598617799652089*^9, 
+  3.598617829834969*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{Automatic, 342}, {-127, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 477, 8, 114, "Input"],
+Cell[1037, 30, 94, 1, 28, "Input"],
+Cell[1134, 33, 657, 18, 46, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

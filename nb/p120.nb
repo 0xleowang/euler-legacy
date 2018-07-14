@@ -1,0 +1,102 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3009,         92]
+NotebookOptionsPosition[      2677,         76]
+NotebookOutlinePosition[      3037,         92]
+CellTagsIndexPosition[      2994,         89]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "120", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.601417605698555*^9, 3.601417619416369*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.601417604266418*^9, 3.601417605040688*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SquareRemainders", "[", 
+    RowBox[{"a_Integer", ",", "n_Integer"}], "]"}], ":=", 
+   RowBox[{"Mod", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"a", "-", "1"}], ")"}], "^", "n"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"a", "+", "1"}], ")"}], "^", "n"}]}], ",", 
+     RowBox[{"a", "^", "2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", 
+     RowBox[{"rMax", "=", "0"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"a", "=", "3"}], ",", 
+      RowBox[{"a", "\[LessEqual]", "1000"}], ",", 
+      RowBox[{"a", "++"}], ",", 
+      RowBox[{"rMax", "+=", 
+       RowBox[{"Max", "@", 
+        RowBox[{"Map", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"SquareRemainders", "[", 
+            RowBox[{"a", ",", "#"}], "]"}], "&"}], ",", 
+          RowBox[{"Range", "[", 
+           RowBox[{"2", "*", "a"}], "]"}]}], "]"}]}]}]}], "]"}], ";", 
+    RowBox[{"Print", "[", "rMax", "]"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.601413101440578*^9, 3.601413101557056*^9}, {
+  3.601416392961625*^9, 3.601416418976982*^9}, {3.601416470929042*^9, 
+  3.6014165875905743`*^9}, {3.6014167119123487`*^9, 3.601416725437976*^9}, {
+  3.601416776319816*^9, 3.601417034176362*^9}, {3.6014170821288223`*^9, 
+  3.6014171301789637`*^9}, {3.601417189127075*^9, 3.601417316945621*^9}, {
+  3.60141747491066*^9, 3.601417594154518*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{284, Automatic}, {-229, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 476, 8, 114, "Input"],
+Cell[1036, 30, 92, 1, 28, "Input"],
+Cell[1131, 33, 1542, 41, 80, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

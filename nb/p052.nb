@@ -1,0 +1,83 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2257,         74]
+NotebookOptionsPosition[      1926,         58]
+NotebookOutlinePosition[      2286,         74]
+CellTagsIndexPosition[      2243,         71]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "52", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.598670602490295*^9, 3.5986706067524023`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598670598590053*^9, 3.598670601744228*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"PermutedMultipleQ", "[", "n_Integer", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Length", "@", 
+     RowBox[{"Union", "[", 
+      RowBox[{"Sort", "/@", 
+       RowBox[{"IntegerDigits", "/@", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Range", "[", "6", "]"}], "*", "n"}], ")"}]}]}], "]"}]}], 
+    "\[Equal]", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"NestWhile", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "+", "1"}], "&"}], ",", "1", ",", 
+   RowBox[{
+    RowBox[{"!", 
+     RowBox[{"PermutedMultipleQ", "[", "#", "]"}]}], "&"}]}], "]"}]}], "Input",\
+
+ CellChangeTimes->{{3.598670205490773*^9, 3.5986702944412117`*^9}, {
+  3.598670332016089*^9, 3.598670449851881*^9}, {3.5986704831513853`*^9, 
+  3.59867060057765*^9}}]
+},
+WindowSize->{740, 508},
+WindowMargins->{{259, Automatic}, {-145, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 477, 8, 114, "Input"],
+Cell[1037, 30, 92, 1, 28, "Input"],
+Cell[1132, 33, 790, 23, 63, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

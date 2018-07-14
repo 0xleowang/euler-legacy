@@ -1,0 +1,100 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2853,         90]
+NotebookOptionsPosition[      2523,         74]
+NotebookOutlinePosition[      2880,         90]
+CellTagsIndexPosition[      2837,         87]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "42", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.5986192696004467`*^9, 3.598619280385295*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.598619267333232*^9, 3.5986192724494762`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"words", "=", 
+    RowBox[{"StringSplit", "[", 
+     RowBox[{
+      RowBox[{"StringReplace", "[", 
+       RowBox[{
+        RowBox[{
+        "Import", "[", "\"\<http://projecteuler.net/project/words.txt\>\"", 
+         "]"}], ",", 
+        RowBox[{"\"\<\\\"\>\"", "\[Rule]", "\"\<\>\""}]}], "]"}], ",", 
+      "\"\<,\>\""}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"TriangleNumberQ", "[", "n_Integer", "]"}], ":=", 
+    RowBox[{"IntegerQ", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"1", "+", 
+          RowBox[{"8", "n"}]}], "]"}]}], ")"}], "/", "2"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "@", 
+  RowBox[{"Select", "[", 
+   RowBox[{"words", ",", 
+    RowBox[{
+     RowBox[{"TriangleNumberQ", "@", 
+      RowBox[{"Total", "[", 
+       RowBox[{
+        RowBox[{"ToCharacterCode", "[", "#", "]"}], "-", "64"}], "]"}]}], 
+     "&"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.598618813013872*^9, 3.598618870379786*^9}, {
+  3.598618932095826*^9, 3.5986189532008877`*^9}, {3.5986189899216423`*^9, 
+  3.5986190195419617`*^9}, {3.5986191107795753`*^9, 3.598619153879672*^9}, {
+  3.5986192490098343`*^9, 3.598619266499699*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{72, Automatic}, {39, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 477, 8, 114, "Input"],
+Cell[1037, 30, 94, 1, 28, "Input"],
+Cell[1134, 33, 1385, 39, 131, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

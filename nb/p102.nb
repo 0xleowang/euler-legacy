@@ -1,0 +1,153 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5273,        143]
+NotebookOptionsPosition[      4940,        127]
+NotebookOutlinePosition[      5300,        143]
+CellTagsIndexPosition[      5257,        140]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "102", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.601852015280258*^9, 3.601852025971746*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.601852013122059*^9, 3.601852014616877*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"triangles", "=", 
+    RowBox[{"ToExpression", "@", 
+     RowBox[{"StringSplit", "[", 
+      RowBox[{
+       RowBox[{"StringSplit", "[", 
+        RowBox[{
+         RowBox[{
+         "Import", "[", 
+          "\"\<http://projecteuler.net/project/triangles.txt\>\"", "]"}], 
+         ",", "\"\<\\n\>\""}], "]"}], ",", "\"\<,\>\""}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"ContainOriginQ", "[", "data_List", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "x1", ",", "x2", ",", "x3", ",", "y1", ",", "y2", ",", "y3", ",", "y4",
+         ",", "check", ",", "a", ",", "b", ",", "c", ",", "sample"}], "}"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"sample", "=", "data"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"check", "=", "True"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Do", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"x1", "=", 
+           RowBox[{"sample", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"y1", "=", 
+           RowBox[{"sample", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"x2", "=", 
+           RowBox[{"sample", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"y2", "=", 
+           RowBox[{"sample", "[", 
+            RowBox[{"[", "4", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"x3", "=", 
+           RowBox[{"sample", "[", 
+            RowBox[{"[", "5", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"y3", "=", 
+           RowBox[{"sample", "[", 
+            RowBox[{"[", "6", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", 
+          RowBox[{"a", "=", 
+           RowBox[{"y2", "-", "y1"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"b", "=", 
+           RowBox[{"x1", "-", "x2"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"c", "=", 
+           RowBox[{
+            RowBox[{"y1", 
+             RowBox[{"(", 
+              RowBox[{"x2", "-", "x1"}], ")"}]}], "+", 
+            RowBox[{"x1", 
+             RowBox[{"(", 
+              RowBox[{"y1", "-", "y2"}], ")"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"c", "*", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"a", " ", "x3"}], "+", 
+                RowBox[{"b", " ", "y3"}], " ", "+", " ", "c"}], ")"}]}], "<", 
+             "0"}], ",", 
+            RowBox[{"check", "=", "False"}]}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"sample", "=", 
+           RowBox[{"RotateRight", "@", 
+            RowBox[{"RotateRight", "[", "sample", "]"}]}]}], ";"}], 
+         "\[IndentingNewLine]", ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "3"}], "}"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "check", "]"}]}]}], "\[IndentingNewLine]", 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{"Count", "[", 
+  RowBox[{
+   RowBox[{"ContainOriginQ", "/@", "triangles"}], ",", "True"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.601850822558042*^9, 3.601850871040636*^9}, {
+   3.601850936907847*^9, 3.601850964043496*^9}, {3.6018510056387568`*^9, 
+   3.6018510158245697`*^9}, {3.6018510836255817`*^9, 
+   3.6018511276722603`*^9}, {3.601851209756218*^9, 3.601851373194009*^9}, {
+   3.601851429865753*^9, 3.601851432406196*^9}, {3.60185172470043*^9, 
+   3.6018518271918573`*^9}, 3.601851880939918*^9, {3.6018519829778748`*^9, 
+   3.601851999109167*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{Automatic, 186}, {-190, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 476, 8, 114, "Input"],
+Cell[1036, 30, 92, 1, 28, "Input"],
+Cell[1131, 33, 3805, 92, 488, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

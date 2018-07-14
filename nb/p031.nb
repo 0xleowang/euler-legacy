@@ -1,0 +1,115 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3624,        106]
+NotebookOptionsPosition[      3293,         90]
+NotebookOutlinePosition[      3650,        106]
+CellTagsIndexPosition[      3607,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", " ", 
+  RowBox[{"*", " ", "My", " ", "Project", " ", "Euler", " ", "Solutions", " ", 
+   RowBox[{"(", 
+    RowBox[{"Mathematica", " ", "9"}], ")"}], "\[IndentingNewLine]", "*", " ",
+    "Problem", " ", "31", "\[IndentingNewLine]", "*", "\[IndentingNewLine]", 
+   "*", " ", "By", " ", "Eleven", " ", "Wang"}], "\[IndentingNewLine]", " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.598830056612988*^9, 3.598830057025578*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.59881134160176*^9, 3.5988113457338953`*^9}, {
+  3.598811404736252*^9, 3.598811405449223*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"coins", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "5", ",", "10", ",", "20", ",", "50", ",", "100", ",",
+      "200"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Ways", "[", 
+     RowBox[{"p_Integer", ",", "i_Integer"}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Ways", "[", 
+      RowBox[{"p", ",", "i"}], "]"}], "=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"l", "=", "0"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"p", "\[Equal]", "0"}], ",", 
+          RowBox[{"l", "=", "1"}]}], "]"}], ";", 
+        RowBox[{"Do", "[", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"p", "\[GreaterEqual]", 
+              RowBox[{"coins", "[", 
+               RowBox[{"[", "n", "]"}], "]"}]}], "&&", 
+             RowBox[{"n", "\[LessEqual]", "i"}]}], ",", 
+            RowBox[{"l", "+=", 
+             RowBox[{"Ways", "[", 
+              RowBox[{
+               RowBox[{"p", "-", 
+                RowBox[{"coins", "[", 
+                 RowBox[{"[", "n", "]"}], "]"}]}], ",", "n"}], "]"}]}]}], 
+           "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"n", ",", 
+            RowBox[{"Length", "[", "coins", "]"}], ",", "1", ",", 
+            RowBox[{"-", "1"}]}], "}"}]}], "]"}], ";", "l"}]}], "]"}]}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Ways", "[", 
+  RowBox[{"200", ",", 
+   RowBox[{"Length", "[", "coins", "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.598828623002646*^9, 3.598828637208021*^9}, {
+  3.598828751831542*^9, 3.598828753385618*^9}, {3.598829093631772*^9, 
+  3.598829195933331*^9}, {3.598829299529272*^9, 3.598829316464439*^9}, {
+  3.598829353628924*^9, 3.59882942680142*^9}, {3.598829460455268*^9, 
+  3.598829466629574*^9}, {3.5988295180077744`*^9, 3.598829605853095*^9}, {
+  3.598829687953415*^9, 3.598829714926033*^9}, {3.598829755229788*^9, 
+  3.598829756178566*^9}, {3.5988364568345327`*^9, 3.598836506614442*^9}}]
+},
+WindowSize->{740, 702},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 475, 8, 114, "Input"],
+Cell[1035, 30, 142, 2, 28, "Input"],
+Cell[1180, 34, 2109, 54, 131, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
